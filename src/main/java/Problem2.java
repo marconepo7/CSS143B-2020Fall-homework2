@@ -5,7 +5,7 @@ public class Problem2 {
 If length of array is null, 0, or 1. Return -1, 0, or 1
 Create running total for the length of the new array
 Go through each element, if it is the same as the next element, loop again
-If it is not the same, increment length of new array and set element at the current index of new lengrh
+If it is not the same, increment length of new array and set element at the current index of new length
      */
 
     // Do not change signature (function name, parameters and return type)
