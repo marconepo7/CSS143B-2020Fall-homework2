@@ -1,19 +1,21 @@
 package Problem3;
 
+import java.util.UUID;
+
 public class BookRomance extends Book {
 
     private int lateFeePerDayInDollar = 4;
 
     public BookRomance(String title, String author) {
-        super();
-        this.title = title;
-        this.author = author;
+        super.title = title;
+        super.author = author;
+        super.id = UUID.randomUUID();
     }
 
     public BookRomance(BookRomance anotherBook) {
-        super();
-        this.title = anotherBook.title;
-        this.author = anotherBook.title;
+        super.title = anotherBook.title;
+        super.author = anotherBook.author;
+        super.id = anotherBook.id;
     }
 
     @Override

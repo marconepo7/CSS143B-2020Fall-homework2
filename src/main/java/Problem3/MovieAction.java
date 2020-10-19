@@ -1,20 +1,22 @@
 package Problem3;
 
+import java.util.UUID;
+
 public class MovieAction extends Movie {
 
     private int lateFeePerDayInDollar = 5;
 
     public MovieAction(String rating, String title) {
-        super();
-        this.title = title;
-        this.rating = rating;
 
+        super.title = title;
+        super.rating = rating;
+        super.id = UUID.randomUUID();
     }
 
     public MovieAction(MovieAction anotherMovie) {
-        super();
-        this.title = anotherMovie.title;
-        this.rating = anotherMovie.rating;
+        super.title = anotherMovie.title;
+        super.rating = anotherMovie.rating;
+        super.id = anotherMovie.id;
     }
 
     @Override
@@ -28,7 +30,7 @@ public class MovieAction extends Movie {
         if (numOfDaysPastDue <= 0) {
             return 0;
         }
-         else if (numOfDaysPastDue > 5) {
+         else if (numOfDaysPastDue >= 5) {
             lateFees = (2 * numOfDaysPastDue * lateFeePerDayInDollar);
             return lateFees;
         }

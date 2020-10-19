@@ -1,18 +1,20 @@
 package Problem3;
 
+import java.util.UUID;
+
 public class MovieComedy extends Movie {
     private int lateFeePerDayInDollar = 3;
 
     public MovieComedy(String rating, String title) {
-        super();
-        this.title = title;
-        this.rating = rating;
+        super.title = title;
+        super.rating = rating;
+        this.id = UUID.randomUUID();
     }
 
     public MovieComedy(MovieComedy anotherMovie) {
-        super();
-        this.title = anotherMovie.title;
-        this.rating = anotherMovie.rating;
+        super.title = anotherMovie.title;
+        super.rating = anotherMovie.rating;
+        super.id = anotherMovie.id;
     }
 
     @Override

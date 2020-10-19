@@ -1,5 +1,7 @@
 package Problem3;
 
+import java.util.UUID;
+
 public class BookFiction extends Book {
 
     private int lateFeePerDayInDollar = 2;
@@ -7,17 +9,18 @@ public class BookFiction extends Book {
     private String genres;
 
     public BookFiction(String title, String author, String genres) {
-        super();
         super.title = title;
-        this.author = author;
+        super.author = author;
         this.genres = genres;
+        this.id = UUID.randomUUID();
     }
 
     // copy constructor
     public BookFiction(BookFiction anotherBook) {
-        this.title = anotherBook.title;
-        this.author = anotherBook.author;
+        super.title = anotherBook.title;
+        super.author = anotherBook.author;
         this.genres = anotherBook.genres;
+        super.id = anotherBook.id;
     }
 
     @Override
