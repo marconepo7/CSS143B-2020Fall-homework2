@@ -4,13 +4,15 @@ public class MovieComedy extends Movie {
     private int lateFeePerDayInDollar = 3;
 
     public MovieComedy(String rating, String title) {
-        // homework
-        // tip: use the 'super' keyword
+        super();
+        this.title = title;
+        this.rating = rating;
     }
 
     public MovieComedy(MovieComedy anotherMovie) {
-        // homework
-        // tip: use the 'super' keyword
+        super();
+        this.title = anotherMovie.title;
+        this.rating = anotherMovie.rating;
     }
 
     @Override
@@ -20,7 +22,14 @@ public class MovieComedy extends Movie {
 
     @Override
     public int calcLateFees(int numOfDaysPastDue) {
-        int lateFees  = numOfDaysPastDue *lateFeePerDayInDollar;
-        return  lateFees;
+        int lateFees;
+        if (numOfDaysPastDue <= 0) {
+            return 0;
+        }
+        else {
+            lateFees = (numOfDaysPastDue * lateFeePerDayInDollar);
+            return lateFees;
+        }
+
     }
 }

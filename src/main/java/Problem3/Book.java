@@ -20,6 +20,9 @@ public abstract class Book implements StoreMediaOperations {
         this.id = anotherBook.id;
     }
 
+    public Book() {
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (id.equals(this.id)) {

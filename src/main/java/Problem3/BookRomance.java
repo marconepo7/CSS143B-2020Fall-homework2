@@ -5,13 +5,15 @@ public class BookRomance extends Book {
     private int lateFeePerDayInDollar = 4;
 
     public BookRomance(String title, String author) {
-        // homework
-        // tip: use the 'super' keyword
+        super();
+        this.title = title;
+        this.author = author;
     }
 
     public BookRomance(BookRomance anotherBook) {
-        // homework
-        // tip: use the 'super' keyword
+        super();
+        this.title = anotherBook.title;
+        this.author = anotherBook.title;
     }
 
     @Override
@@ -21,7 +23,13 @@ public class BookRomance extends Book {
 
     @Override
     public int calcLateFees(int numOfDaysPastDue) {
-        int lateFees  = numOfDaysPastDue *lateFeePerDayInDollar;
-        return  lateFees;
+        int lateFees;
+        if (numOfDaysPastDue <= 0) {
+            return 0;
+        }
+        else {
+            lateFees = (numOfDaysPastDue * lateFeePerDayInDollar);
+            return lateFees;
+        }
     }
 }
