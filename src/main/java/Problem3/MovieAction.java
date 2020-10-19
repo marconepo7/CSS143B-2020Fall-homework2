@@ -7,6 +7,7 @@ public class MovieAction extends Movie {
     public MovieAction(String rating, String title) {
         // homework
         // tip: use the 'super' keyword
+
     }
 
     public MovieAction(MovieAction anotherMovie) {
@@ -21,6 +22,15 @@ public class MovieAction extends Movie {
 
     @Override
     public int calcLateFees(int numOfDaysPastDue) {
-        // homework
+        int lateFees;
+        if (numOfDaysPastDue > 5) {
+            lateFees = 2 * numOfDaysPastDue * lateFeePerDayInDollar;
+            return lateFees;
+        }
+        else
+        {
+            lateFees = numOfDaysPastDue * lateFeePerDayInDollar;
+            return lateFees;
+        }
     }
 }

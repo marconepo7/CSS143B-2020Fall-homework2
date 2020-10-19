@@ -19,6 +19,7 @@ public abstract class Movie implements StoreMediaOperations {
         this.rating = anotherMovie.rating;
     }
 
+
     @Override
     public boolean equals(Object obj) {
         if (id.equals(this.id)) {

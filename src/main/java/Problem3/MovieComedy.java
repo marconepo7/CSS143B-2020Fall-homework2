@@ -20,6 +20,7 @@ public class MovieComedy extends Movie {
 
     @Override
     public int calcLateFees(int numOfDaysPastDue) {
-        // homework
+        int lateFees  = numOfDaysPastDue *lateFeePerDayInDollar;
+        return  lateFees;
     }
 }

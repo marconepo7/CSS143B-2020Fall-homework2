@@ -21,6 +21,7 @@ public class BookRomance extends Book {
 
     @Override
     public int calcLateFees(int numOfDaysPastDue) {
-        // homework
+        int lateFees  = numOfDaysPastDue *lateFeePerDayInDollar;
+        return  lateFees;
     }
 }

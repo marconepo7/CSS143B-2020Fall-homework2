@@ -9,6 +9,7 @@ public class BookFiction extends Book {
     public BookFiction(String title, String author, String genres) {
         // homework
         // tip: use the 'super' keyword
+
     }
 
     // copy constructor
@@ -24,6 +25,7 @@ public class BookFiction extends Book {
 
     @Override
     public int calcLateFees(int numOfDaysPastDue) {
-        // homework
+        int lateFees  = 2* numOfDaysPastDue *lateFeePerDayInDollar;
+        return  lateFees;
     }
 }
