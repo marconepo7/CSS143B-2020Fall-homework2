@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 // DO NOT REMOVE OR CHANGE ANYTHING HERE!
 public class Problem3Test {
     @Test
-    public void testMovieActionEquals() {
+    public void ActionEquals() {
         MovieAction m = new MovieAction("PG13", "ti1");
         MovieAction mc = new MovieAction(m);
         assertTrue(m.equals(mc));
